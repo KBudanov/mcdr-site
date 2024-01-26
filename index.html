@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="choseRise">
+        <input type="button" class="riseBtn" value="150" id="riseBtn150">
+        <input type="button" class="riseBtn" value="120" id="riseBtn120">
+        <input type="button" class="riseBtn" value="115" id="riseBtn115">
+        <input type="button" class="riseBtn" value="105" id="riseBtn105">
+        <input type="button" class="riseBtn" value="100" id="riseBtn100">
+        <input type="button" class="riseBtn" value="95" id="riseBtn95">
+        <input type="button" class="riseBtn" value="90" id="riseBtn90">
+        <input type="button" class="riseBtn" value="70" id="riseBtn70">
+        <input type="button" class="riseBtn" value="55" id="riseBtn55">
+    </div>
+
+
+    <img src="" alt="" id="riseImg">
+
+    <script>
+        let images = {
+            150: "imgs/img1.JPG",
+            120: "imgs/img2.JPG",
+            115: "imgs/img3.JPG",
+            105: "imgs/img4.JPG",
+            100: "imgs/img5.JPG",
+            95: "imgs/img6.JPG",
+            90: "imgs/img7.PNG",
+            70: "imgs/img8.JPG",
+            55: "imgs/img9.JPG",
+        }
+
+
+        $(".riseBtn").on("click", function() {
+            let btnId = this.id;
+            btnId = btnId.split("riseBtn")[1]
+            console.log(images[btnId])
+            $("#riseImg").attr("src", images[btnId])
+            console.log()
+        })
+    </script>
+</body>
+
+</html>
