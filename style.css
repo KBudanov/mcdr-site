@@ -3,6 +3,9 @@ body {
     background-color: #333;
     color: #fff;
     padding: 20px;
+    font-family: "Overlock", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .container {
@@ -50,6 +53,8 @@ body {
 
 input[type="number"],
 input[type="button"] {
+    margin-top: 10px;
+    text-align: center;
     padding: 10px;
     border: 2px solid #007bff;
     border-radius: 5px;
@@ -62,6 +67,30 @@ input[type="button"]:hover {
 
 img#anodColorsImg {
     width: 100%;
-    max-width: 300px;
+    max-width: 90%;
     /* Reduced size for the color examples image */
+}
+
+.choseAnod,
+.textInfo {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+textarea,
+input,
+button {
+    background-color: rgb(214, 214, 214);
+}
+
+.tick-cross {
+    font-size: 24px;
+    cursor: pointer;
+    user-select: none;
 }

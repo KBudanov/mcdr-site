@@ -22,15 +22,39 @@ let defaulUpBack = {
     55: "5 , 9"
 }
 
+
+let colors = {
+    1: "Bronze",
+    2: "Night",
+    3: "228",
+    4: "Black sea",
+    5: "Cerulean",
+    6: "Sun rise",
+    7: "Aurum",
+    8: "Rose-Gold",
+    9: "Pink",
+    10: "Purple",
+    11: "Violet",
+    12: "An-Twilling",
+    13: "Coral reefs",
+    14: "Scarab Green",
+    15: "Black Matt",
+    16: "Black Bliss",
+    17: "TC",
+    18: "TLC",
+    19: "TMC"
+}
+
 let rise;
 let upsweep;
 let backsweep;
-let width;
+let width = 770;
 let colorAnod;
 let paintExp;
 let colorPaint;
 let spacers;
 let extraInf;
+let customerTg;
 
 
 //rise chosing
@@ -41,8 +65,25 @@ $(".riseBtn").on("click", function() {
     rise = btnId;
     upsweep = defaulUpBack[btnId].split(",")[0]
     backsweep = defaulUpBack[btnId].split(",")[1]
+})
+
+//textareas
+$(".orderBtn").on("click", function() {
+    extraInf = $("#additionalInf").val()
+    colorPaint = $("#paintDesc").val()
+    paintExp = $("#anodDesign").val()
 
 })
+
+
+
+//anod chose
+$(".anodBtn").on("click", function() {
+    let btnAnId = this.id;
+    btnAnId = btnAnId.split("anodBtn")[1]
+    colorAnod = colors[btnAnId];
+})
+
 
 //upsweep chose 
 $("#upReady").on("click", function() {
@@ -85,7 +126,16 @@ $("#widthReady").on("click", function() {
 })
 
 
+//spacers
+$(document).ready(function() {
 
+    let isChecked = false;
+    $('#tickCrossButton').click(function() {
+        isChecked = !isChecked;
+        $(this).text(isChecked ? '✔️' : '❌');
+        spacers = isChecked
+    });
+});
 
 
 
@@ -99,23 +149,33 @@ $("#widthReady").on("click", function() {
 $(".orderBtn").on("click", function() {
     if (width) {
         let tgId = 961172191;
+        let tgIdDany = 750134864;
         let botToken = '6827397329:AAGziUZrNAD3bxQAfswT5VmSDDKWCg2HyqI';
 
         let a = "text"
 
-        let orderText = `
-        NEW ORDER %0A
+        let orderText = `New order %0A
         Rise: ${rise}%0A
         Up-sweep: ${upsweep}%0A
         Back-sweep: ${backsweep}%0A
         Width: ${width}%0A
+        Anod color: ${colorAnod}%0A
+        Paint color : ${colorPaint}%0A
+        Paint explenation : ${paintExp}%0A
+        Spacers : ${spacers}%0A
+        Extra comments : ${extraInf}%0A
+        %0A
+        %0A
+        Customer tg : ${customerTg}
+
         `;
 
 
         let botUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${tgId}&text=${orderText}&parse_mode=html`;
-
+        let botUrlDany = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${tgIdDany}&text=${orderText}&parse_mode=html`;
 
         $.post(botUrl)
+        $.post(botUrlDany)
     } else {
         alert("chose width")
     }
