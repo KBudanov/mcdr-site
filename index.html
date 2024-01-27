@@ -5,82 +5,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        
-        .choseRise {
-            display: grid;
-            grid-template-columns: repeat(3, 33%);
-            max-width: 35%;
-            padding: 5px;
-        }
-        
-        .riseBtn {
-            border-radius: 15%;
-            margin: 5px;
-        }
-        
-        #riseImg {
-            max-width: 40%;
-            max-height: 40%;
-            border-radius: 15%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    <div class="choseRise">
-        <input type="button" class="riseBtn" value="150" id="riseBtn150">
-        <input type="button" class="riseBtn" value="120" id="riseBtn120">
-        <input type="button" class="riseBtn" value="115" id="riseBtn115">
-        <input type="button" class="riseBtn" value="105" id="riseBtn105">
-        <input type="button" class="riseBtn" value="100" id="riseBtn100">
-        <input type="button" class="riseBtn" value="95" id="riseBtn95">
-        <input type="button" class="riseBtn" value="90" id="riseBtn90">
-        <input type="button" class="riseBtn" value="70" id="riseBtn70">
-        <input type="button" class="riseBtn" value="55" id="riseBtn55">
-    </div>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <link rel="stylesheet" href="styles.css">
+            <title>Document</title>
+        </head>
+
+        <body>
+            <div class="container">
+                <div class="choseRise">
+                    <input type="button" class="riseBtn" value="150" id="riseBtn150">
+                    <input type="button" class="riseBtn" value="120" id="riseBtn120">
+                    <input type="button" class="riseBtn" value="115" id="riseBtn115">
+                    <input type="button" class="riseBtn" value="105" id="riseBtn105">
+                    <input type="button" class="riseBtn" value="100" id="riseBtn100">
+                    <input type="button" class="riseBtn" value="95" id="riseBtn95">
+                    <input type="button" class="riseBtn" value="90" id="riseBtn90">
+                    <input type="button" class="riseBtn" value="70" id="riseBtn70">
+                    <input type="button" class="riseBtn" value="55" id="riseBtn55">
+                </div>
+                <div class="upsweep">
+                    <p>Виберіть свій up-sweep, чи скористайтесь рекомендованими налаштуваннями</p>
+                    <p style="color: red;">Не пишіть нічого, щоб залишити стандартні налаштування</p>
+                    <input type="number" placeholder="min-7, max-15" name="" id="upSweep">
+                    <input type="button" id="upReady" value="Готово">
+                </div>
+                <div class="backsweep">
+                    <p>Виберіть свій back-sweep, чи скористайтесь рекомендованими налаштуваннями</p>
+                    <p style="color: red;">Не пишіть нічого, щоб залишити стандартні налаштування</p>
+                    <input type="number" placeholder="min-7, max-15" name="" id="backSweep">
+                    <input type="button" id="backReady" value="Готово">
+                </div>
+                Рекомендовано: <br>
+                <p>rise: 115/120/150, back: 11, up: 3</p>
+                <p>rise: 90/100, back: 10, up: 3</p>
+                <p>rise: 70, back: 9, up: 4</p>
+                <p> rise: 50, back: 9, up: 5</p>
 
 
-    <img src="" alt="" id="riseImg">
 
-    <script>
-        let images = {
-            150: "imgs/img1.JPG",
-            120: "imgs/img2.PNG",
-            115: "imgs/img3.JPG",
-            105: "imgs/img4.JPG",
-            100: "imgs/img5.JPG",
-            95: "imgs/img6.JPG",
-            90: "imgs/img7.JPG",
-            70: "imgs/img8.JPG",
-            55: "imgs/img9.JPG",
-        }
-        let rise;
-        let upsweep;
-        let backsweep;
-        let width;
-        let colorAnod;
-        let paintExp;
-        let colorPaint;
-        let spacers;
-        let extraInf;
+                <div class="barWidth">
+                    <p>Оберіть ширину керма:</p>
+                    <p style="color: red;">Обов'язковий пункт</p>
+                    <input type="number" placeholder="min-710, max-800" name="" id="width">
+                    <input type="button" id="widthReady" value="Готово">
+                </div>
+            </div>
+            <img src="imgs/anodColors.JPG" id="anodColorsImg" alt="">
+            <div class="anodButtons">
+                <input type="button" value="Bronze" class="anodBtn">
+                <input type="button" value="Night" class="anodBtn">
+                <input type="button" value="228" class="anodBtn">
+                <input type="button" value="Black Sea" class="anodBtn">
+                <input type="button" value="Cerulean" class="anodBtn">
+                <input type="button" value="Sun Rise" class="anodBtn">
+                <input type="button" value="Aurum" class="anodBtn">
+                <input type="button" value="Rose-Gold" class="anodBtn">
+                <input type="button" value="Pink" class="anodBtn">
+                <input type="button" value="Purple" class="anodBtn">
+                <input type="button" value="Violet" class="anodBtn">
+                <input type="button" value="An-Twilight" class="anodBtn">
+                <input type="button" value="Coral Reefs" class="anodBtn">
+                <input type="button" value="Scarab Green" class="anodBtn">
+                <input type="button" value="Black Matt" class="anodBtn">
+                <input type="button" value="Black Bliss" class="anodBtn">
+            </div>
+            <button class="orderBtn">Order</button>
 
 
+            <script src="scripts/script.js"></script>
+        </body>
 
-        $(".riseBtn").on("click", function() {
-            let btnId = this.id;
-            btnId = btnId.split("riseBtn")[1]
-            console.log(images[btnId])
-            $("#riseImg").attr("src", images[btnId])
-            console.log()
-        })
-    </script>
-</body>
+        </html>
 
-</html>
+
+        <script src="scripts/script.js"></script>
+    </body>
+
+    </html>
