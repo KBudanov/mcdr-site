@@ -45,6 +45,10 @@ let colors = {
     19: "TMC"
 }
 
+let colorsForAnodBtns = Object.values(colors)
+console.log(colorsForAnodBtns)
+
+
 let rise;
 let upsweep;
 let backsweep;
@@ -68,22 +72,34 @@ $(".riseBtn").on("click", function() {
 })
 
 //textareas
-$(".orderBtn").on("click", function() {
+$(".nextBtn").on("click", function() {
     extraInf = $("#additionalInf").val()
     colorPaint = $("#paintDesc").val()
     paintExp = $("#anodDesign").val()
+
+    $("#anodDesign").val(" ")
+    $("#paintDesc").val(" ")
+    $("#additionalInf").val(" ")
 
 })
 
 
 
 //anod chose
-$(".anodBtn").on("click", function() {
-    let btnAnId = this.id;
-    btnAnId = btnAnId.split("anodBtn")[1]
-    colorAnod = colors[btnAnId];
-})
 
+$(document).on("click", ".anodBtn", function() {
+    let btnAnId = this.id;
+    btnAnId = btnAnId.split("anodBtn")[1];
+    let colorAnod = colors[btnAnId];
+    console.log("Color clicked: " + colorAnod);
+});
+
+
+for (let i = 0; i < colorsForAnodBtns.length; i++) {
+    let container = $(".anodButtons");
+    $(".anodButtons").append(`<input type="button" class="anodBtn" value="${colorsForAnodBtns[i]}" id="anodBtn${i}">`);
+
+}
 
 //upsweep chose 
 $("#upReady").on("click", function() {
@@ -146,7 +162,7 @@ $(document).ready(function() {
 
 //send info to tg bot
 
-$(".orderBtn").on("click", function() {
+$(".nextBtn").on("click", function() {
     if (width) {
         let tgId = 961172191;
         let tgIdDany = 750134864;

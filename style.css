@@ -72,7 +72,8 @@ img#anodColorsImg {
 }
 
 .choseAnod,
-.textInfo {
+.textInfo,
+.customerInfoDiv {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
