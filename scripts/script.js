@@ -23,7 +23,10 @@ let defaulUpBack = {
 }
 
 let keysForRise = Object.keys(defaulUpBack)
-console.log(keysForRise)
+
+
+
+
 
 //!!!!!!!!!!!!!!!!!!!!!
 
@@ -54,27 +57,38 @@ let colors = {
 let rise;
 let upsweep;
 let backsweep;
-let width = 770;
+let width = 760;
 let colorAnod;
 let paintExp;
 let colorPaint;
-let spacers;
+let spacers = false;
 let extraInf;
 let customerTg;
 
 
 
 //rise chosing
-$(".riseBtn").on("click", function() {
-    let btnId = this.id;
-    btnId = btnId.split("riseBtn")[1]
-    $("#riseImg").attr("src", images[btnId])
-    rise = btnId;
-    upsweep = defaulUpBack[btnId].split(",")[0]
-    backsweep = defaulUpBack[btnId].split(",")[1]
-})
 
-//!!!!!!!!!!!!!!!!!!! change to for 
+
+
+$(document).on("click", ".riseBtn", function() {
+    let btnRId = this.id;
+    btnRId = btnRId.split("riseBtn")[1];
+    rise = keysForRise[btnRId];
+    console.log("Rise:  " + rise);
+    $(".riseImg").attr("src", images[rise])
+    upsweep = defaulUpBack[rise].split(",")[0]
+    backsweep = defaulUpBack[rise].split(",")[1]
+
+});
+
+
+for (let i = 0; i < keysForRise.length; i++) {
+
+    $(".choseRise").prepend(` <input type="button" class="riseBtn" value="${keysForRise[i]}" id="riseBtn${i}">`);
+
+}
+
 
 //textareas
 $(".nextBtn").on("click", function() {

@@ -95,3 +95,7 @@ button {
     cursor: pointer;
     user-select: none;
 }
+
+.riseImg {
+    max-width: 20vh;
+}
