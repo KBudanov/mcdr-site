@@ -99,3 +99,50 @@ button {
 .riseImg {
     max-width: 20vh;
 }
+
+
+/*slider btn for colors*/
+
+.switch {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    min-width: 100px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 50px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    padding: 5px 15px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    content: attr(data-text-checked);
+}
+
+.slider:before {
+    position: absolute;
+    content: attr(data-text);
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}

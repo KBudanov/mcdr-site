@@ -67,6 +67,7 @@ let customerTg;
 
 
 
+
 //rise chosing
 
 
@@ -123,38 +124,80 @@ for (let i = 0; i < colorsForAnodBtns.length; i++) {
 
 }
 
+// Create a function to set up the input dropdown
+function setUpInputDropdown() {
+    // Create a select element
+    const $dropdown = $('<select>', { id: 'dropdown' });
 
-
-
-
-//upsweep chose 
-$("#upReady").on("click", function() {
-    let upsweepCheck = $("#upSweep").val();
-    if (upsweepCheck <= 6 && upsweepCheck >= 1) {
-        upsweep = upsweepCheck;
-        $("#upSweep").val("");
-        $("#upSweep").attr("placeholder", `choosed - ${upsweep}`)
-    } else {
-        alert("Wrong equall , chose up-sweep from 1 to 6")
-        $("#upSweep").val("");
+    // Add options 1 to 6
+    for (let i = 1; i <= 6; i++) {
+        $dropdown.append($('<option>', { value: i, text: i }));
     }
-})
 
-//back chose 
-$("#backReady").on("click", function() {
-    let backSwCheck = $("#backSweep").val();
-    if (backSwCheck <= 15 && backSwCheck >= 7) {
-        backsweep = backSwCheck;
-        $("#backSweep").val("");
-        $("#backSweep").attr("placeholder", `choosed - ${backsweep}`)
-    } else {
-        alert("Wrong equall , chose back-sweep from 7 to 15")
-        $("#backSweep").val("");
+    // Create a label element
+    const $label = $('<label>', {
+        for: 'dropdown',
+        text: 'Chose up-sweep, dont write anything to use default settings (they are written below) '
+    });
+
+    // Get a reference to the container div by its ID
+    const $container = $('#up-input-container');
+
+    // Append the label and dropdown to the container
+    $container.append($label, $dropdown);
+
+    // Set an event handler for when the dropdown value changes
+    $dropdown.on('change', function() {
+        const selectedValue = $dropdown.val();
+        upsweep = selectedValue
+        console.log(upsweep)
+
+    });
+}
+
+// Call the function to set up the input dropdown
+setUpInputDropdown();
+setBackInputDropdown();
+
+function setBackInputDropdown() {
+    // Create a select element
+    const $dropdown = $('<select>', { id: 'dropdown' });
+
+    // Add options 1 to 6
+    for (let i = 7; i <= 15; i++) {
+        $dropdown.append($('<option>', { value: i, text: i }));
     }
-})
+
+    // Create a label element
+    const $label = $('<label>', {
+        for: 'dropdown',
+        text: 'Chose back-sweep, or use default settings '
+    });
+
+    // Get a reference to the container div by its ID
+    const $container = $('#back-input-container');
+
+    // Append the label and dropdown to the container
+    $container.append($label, $dropdown);
+
+    // Set an event handler for when the dropdown value changes
+    $dropdown.on('change', function() {
+        const selectedValue = $dropdown.val();
+        backsweep = selectedValue
+        console.log(backsweep)
+
+    });
+
+}
+
+
+
+
+
+
 
 //width chose 
-$("#widthReady").on("click", function() {
+$("#width").on("change", function() {
     let widthCheck = $("#width").val();
     if (widthCheck <= 800 && widthCheck >= 710) {
         width = widthCheck;
@@ -164,6 +207,7 @@ $("#widthReady").on("click", function() {
         alert("Wrong equall , chose width from 710 to 800")
         $("#width").val("");
     }
+    console.log(width)
 
 })
 
@@ -225,3 +269,32 @@ $(".nextBtn").on("click", function() {
 
 
 });
+
+
+$(".colorsInp").hide();
+$('#colorSwitch').change(function() {
+
+    let anodColor = "anod";
+    console.log(anodColor)
+    anodColorSwitch(anodColor);
+    if ($(this).is(':checked')) {
+        $('#anod_color').val('paint');
+        anodColorSwitch('paint');
+    } else {
+        $('#anod_color').val('anod');
+        anodColorSwitch('anod');
+    }
+});
+
+
+function anodColorSwitch(anodColor) {
+    if (anodColor === "paint") {
+        $(".anodDesign").hide();
+        $(".colorsInp").show();
+        $(".anodDesign2").hide();
+    } else {
+        $(".anodDesign").show();
+        $(".colorsInp").hide();
+        $(".anodDesign2").show();
+    }
+}
