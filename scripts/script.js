@@ -72,36 +72,45 @@ let customerTg;
 
 
 
-$(document).on("click", ".riseBtn", function() {
-    let btnRId = this.id;
-    btnRId = btnRId.split("riseBtn")[1];
-    rise = keysForRise[btnRId];
-    console.log("Rise:  " + rise);
-    $(".riseImg").attr("src", images[rise])
-    upsweep = defaulUpBack[rise].split(",")[0]
-    backsweep = defaulUpBack[rise].split(",")[1]
-
-});
 
 
-for (let i = 0; i < keysForRise.length; i++) {
-
-    $(".choseRise").prepend(` <input type="button" class="riseBtn" value="${keysForRise[i]}" id="riseBtn${i}">`);
-
+function renderRise() {
+    for (let i = 0; i < keysForRise.length; i++) {
+        $(".choseRise").prepend(
+            ` <input type="button" class="riseBtn" value="${keysForRise[i]}" id="riseBtn${i}">`
+        );
+    }
 }
+
+// here is the block which will call all after the page is loaded
+$(document).ready(() => {
+    renderRise()
+
+    $(document).on("click", ".riseBtn", function() {
+        let btnRId = this.id;
+        btnRId = btnRId.split("riseBtn")[1];
+        rise = keysForRise[btnRId];
+        console.log("Rise:  " + rise);
+        $(".riseImg").attr("src", images[rise])
+        upsweep = defaulUpBack[rise].split(",")[0]
+        backsweep = defaulUpBack[rise].split(",")[1]
+    });
+
+    $(".nextBtn").on("click", function() {
+        extraInf = $("#additionalInf").val()
+        colorPaint = $("#paintDesc").val()
+        paintExp = $("#anodDesign").val()
+
+        $("#anodDesign").val(" ")
+        $("#paintDesc").val(" ")
+        $("#additionalInf").val(" ")
+
+    })
+})
 
 
 //textareas
-$(".nextBtn").on("click", function() {
-    extraInf = $("#additionalInf").val()
-    colorPaint = $("#paintDesc").val()
-    paintExp = $("#anodDesign").val()
 
-    $("#anodDesign").val(" ")
-    $("#paintDesc").val(" ")
-    $("#additionalInf").val(" ")
-
-})
 
 
 
@@ -211,11 +220,10 @@ $("#width").on("change", function() {
 
 })
 
-
 //spacers
 $(document).ready(function() {
-
     let isChecked = false;
+
     $('#tickCrossButton').click(function() {
         isChecked = !isChecked;
         $(this).text(isChecked ? '✔️' : '❌');
@@ -223,17 +231,10 @@ $(document).ready(function() {
     });
 });
 
-
-
-
-
-
-
-
 //send info to tg bot
-
 $(".nextBtn").on("click", function() {
-    console.log(colorAnod)
+    // console.log(colorAnod)
+
     if (width) {
         let tgId = 961172191;
         let tgIdDany = 750134864;
@@ -272,10 +273,10 @@ $(".nextBtn").on("click", function() {
 
 
 $(".colorsInp").hide();
-let anodColor
-$('#colorSwitch').change(function() {
 
-    anodColor = "anod";
+$('#colorSwitch').change(function() {
+    // debugger
+    let anodColor = "anod";
     console.log(anodColor)
     anodColorSwitch(anodColor);
     if ($(this).is(':checked')) {
@@ -299,3 +300,23 @@ function anodColorSwitch(anodColor) {
         $(".anodDesign2").show();
     }
 }
+
+$(document).ready(function() {
+    // Open default tab
+    $("#defaultOpen").click();
+
+    // Tab click event
+    $(".tablinks").click(function() {
+        var target = $(this).data("target");
+
+        // Remove active class from all tabs
+        $(".tablinks").removeClass("active");
+
+        // Hide all tab content
+        $(".tabcontent").hide();
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        $("#" + target).show();
+        $(this).addClass("active");
+    });
+});

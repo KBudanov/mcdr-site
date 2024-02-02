@@ -48,52 +48,59 @@
     <div class="choseAnod">
 
 
-        <label class="switch">
-                <input type="checkbox" id="colorSwitch" >
-                <span class="slider" data-text="Anodizing" data-text-checked="Paint"></span>
-              </label>
+
+        <div class="tab">
+            <button class="tablinks" id="defaultOpen" data-target="tab1">Anodizing</button>
+            <button class="tablinks" data-target="tab2">Color</button>
+
+            <div id="tab1" class="tabcontent">
+                <h3>Anodizing</h3>
+                <div class="anodDesign2">
+                    <img src="imgs/anodColors.JPG" id="anodColorsImg" alt="">
+                    <div class="anodButtons">
+                    </div>
+                </div>
+
+                <div class="anodDesign">
+                    <p>You can make your own engraving-paint design on a bar with anodizing too, just describe it here</p>
+                    <textarea placeholder="Anod desight" name="" id="anodDesign" cols="30" rows="6"></textarea>
+                </div>
+            </div>
+
+            <div id="tab2" class="tabcontent">
+                <h3>Color</h3>
+
+                <h3>If you prefer paint, we can also do it. Write a color that should be on your bar and make a short description of paint:
+                </h3>
+
+                <textarea placeholder="Paint description" name="" id="paintDesc" cols="30" rows="6"></textarea>
+
+            </div>
+        </div>
 
 
-        <div class="anodDesign2">
-            <img src="imgs/anodColors.JPG" id="anodColorsImg" alt="">
-            <div class="anodButtons">
+
+
+
+        <div class="textInfo">
+
+
+            <p>If you have some speciall comments about your order , leave it here: </p>
+            <textarea placeholder="Additional info" name="" id="additionalInf" cols="30" rows="10"></textarea>
+
+            <div class="addSpacers">
+                MCDR also make the 22.2 to 25.4 spacers , if you need it , click the on the bottomn
+                <div id="tickCrossButton" class="tick-cross">❌</div>
             </div>
 
 
-        </div>
-
-        <div class="anodDesign">
-            <p>You can make your own engraving-paint design on a bar with anodizing too, just describe it here</p>
-            <textarea placeholder="Anod desight" name="" id="anodDesign" cols="30" rows="6"></textarea>
-        </div>
-
-        <div class="colorsInp">
-            <h3>If you prefer paint, we can also do it. Write a color that should be on your bar and make a short description of paint:)
-            </h3>
-
-            <textarea placeholder="Paint description" name="" id="paintDesc" cols="30" rows="6"></textarea>
-        </div>
-    </div>
-
-    <div class="textInfo">
-
-
-        <p>If you have some speciall comments about your order , leave it here: </p>
-        <textarea placeholder="Additional info" name="" id="additionalInf" cols="30" rows="10"></textarea>
-
-        <div class="addSpacers">
-            MCDR also make the 22.2 to 25.4 spacers , if you need it , click the on the bottomn
-            <div id="tickCrossButton" class="tick-cross">❌</div>
+            <button class="nextBtn">Next</button>
         </div>
 
 
-        <button class="nextBtn">Next</button>
-    </div>
 
 
-
-
-    <script src="scripts/script.js"></script>
+        <script src="scripts/script.js"></script>
 </body>
 
 </html>

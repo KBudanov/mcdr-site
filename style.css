@@ -146,3 +146,46 @@ input:checked+.slider:before {
     transform: translateY(-50%);
     color: white;
 }
+
+.tabs {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+
+/* Style the buttons inside the tabs */
+
+.tablinks {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    background-color: whitesmoke;
+}
+
+
+/* Change background color of buttons on hover */
+
+.tablinks:hover {
+    background-color: #ddd;
+}
+
+
+/* Create an active/current tablink class */
+
+.tablinks.active {
+    background-color: #ccc;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
