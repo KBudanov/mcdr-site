@@ -272,9 +272,10 @@ $(".nextBtn").on("click", function() {
 
 
 $(".colorsInp").hide();
+let anodColor
 $('#colorSwitch').change(function() {
 
-    let anodColor = "anod";
+    anodColor = "anod";
     console.log(anodColor)
     anodColorSwitch(anodColor);
     if ($(this).is(':checked')) {

@@ -13,98 +13,87 @@
     <title>Document</title>
 </head>
 
+
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="styles.css">
-        <title>Document</title>
-    </head>
-
-    <body>
-        <div class="container">
-            <p style="margin-top: 0.1%;">Howdy! There you can choose all the settings for your bar: from up-sweep and custom design to wishful deadline for making and custom stickers for your bike;)</p>
-            <div class="choseRise">
-                <img class="riseImg" src="" alt="">
-            </div>
-            <div style="margin-bottom: 10px;" id="up-input-container"></div>
-
-            <div style="margin-bottom: 10px;" id="back-input-container"></div>
-
-
-
-
-
-            Recomended: <br>
-            <p>FOR RISES: 115/120/150, BACK: 11, UP: 3</p>
-            <p>FOR RISES: 90/100, BACK: 10, UP: 3</p>
-            <p>FOR RISES: 95/105, BACK: 10, UP: 4</p>
-            <p>FOR RISE: 70, BACK: 9, UP: 4</p>
-            <p>FOR RISE: 50, BACK: 9, UP: 5</p>
-
-
-
-            <div class="barWidth">
-                <p>Chose bar width:</p>
-                <p>Standart bar width 760mm. Don't write anything to leave it</p>
-                <input type="number" placeholder="min-710, max-800" name="" id="width">
-
-            </div>
+    <div class="container">
+        <p style="margin-top: 0.1%;">Howdy! There you can choose all the settings for your bar: from up-sweep and custom design to wishful deadline for making and custom stickers for your bike;)</p>
+        <div class="choseRise">
+            <img class="riseImg" src="" alt="">
         </div>
+        <div style="margin-bottom: 10px;" id="up-input-container"></div>
 
-        <div class="choseAnod">
+        <div style="margin-bottom: 10px;" id="back-input-container"></div>
 
 
-            <label class="switch">
-                <input type="checkbox" id="colorSwitch" checked>
+
+
+
+        Recomended: <br>
+        <p>FOR RISES: 115/120/150, BACK: 11, UP: 3</p>
+        <p>FOR RISES: 90/100, BACK: 10, UP: 3</p>
+        <p>FOR RISES: 95/105, BACK: 10, UP: 4</p>
+        <p>FOR RISE: 70, BACK: 9, UP: 4</p>
+        <p>FOR RISE: 50, BACK: 9, UP: 5</p>
+
+
+
+        <div class="barWidth">
+            <p>Chose bar width:</p>
+            <p>Standart bar width 760mm. Don't write anything to leave it</p>
+            <input type="number" placeholder="min-710, max-800" name="" id="width">
+
+        </div>
+    </div>
+
+    <div class="choseAnod">
+
+
+        <label class="switch">
+                <input type="checkbox" id="colorSwitch" >
                 <span class="slider" data-text="Anodizing" data-text-checked="Paint"></span>
               </label>
 
 
-            <div class="anodDesign2">
-                <img src="imgs/anodColors.JPG" id="anodColorsImg" alt="">
-                <div class="anodButtons">
-                </div>
-
-
+        <div class="anodDesign2">
+            <img src="imgs/anodColors.JPG" id="anodColorsImg" alt="">
+            <div class="anodButtons">
             </div>
 
-            <div class="anodDesign">
-                <p>You can make your own engraving-paint design on a bar with anodizing too, just describe it here</p>
-                <textarea placeholder="Anod desight" name="" id="anodDesign" cols="30" rows="6"></textarea>
-            </div>
 
-            <div class="colorsInp">
-                <h3>If you prefer paint, we can also do it. Write a color that should be on your bar and make a short description of paint:)
-                </h3>
-
-                <textarea placeholder="Paint description" name="" id="paintDesc" cols="30" rows="6"></textarea>
-            </div>
         </div>
 
-        <div class="textInfo">
+        <div class="anodDesign">
+            <p>You can make your own engraving-paint design on a bar with anodizing too, just describe it here</p>
+            <textarea placeholder="Anod desight" name="" id="anodDesign" cols="30" rows="6"></textarea>
+        </div>
+
+        <div class="colorsInp">
+            <h3>If you prefer paint, we can also do it. Write a color that should be on your bar and make a short description of paint:)
+            </h3>
+
+            <textarea placeholder="Paint description" name="" id="paintDesc" cols="30" rows="6"></textarea>
+        </div>
+    </div>
+
+    <div class="textInfo">
 
 
-            <p>If you have some speciall comments about your order , leave it here: </p>
-            <textarea placeholder="Additional info" name="" id="additionalInf" cols="30" rows="10"></textarea>
+        <p>If you have some speciall comments about your order , leave it here: </p>
+        <textarea placeholder="Additional info" name="" id="additionalInf" cols="30" rows="10"></textarea>
 
-            <div class="addSpacers">
-                MCDR also make the 22.2 to 25.4 spacers , if you need it , click the on the bottomn
-                <div id="tickCrossButton" class="tick-cross">❌</div>
-            </div>
-
-
-            <button class="nextBtn">Next</button>
+        <div class="addSpacers">
+            MCDR also make the 22.2 to 25.4 spacers , if you need it , click the on the bottomn
+            <div id="tickCrossButton" class="tick-cross">❌</div>
         </div>
 
 
+        <button class="nextBtn">Next</button>
+    </div>
 
 
-        <script src="scripts/script.js"></script>
-    </body>
 
-    </html>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
