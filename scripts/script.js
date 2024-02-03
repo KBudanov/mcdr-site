@@ -71,9 +71,6 @@ let customerTg;
 //rise chosing
 
 
-
-
-
 function renderRise() {
     for (let i = 0; i < keysForRise.length; i++) {
         $(".choseRise").prepend(
@@ -146,7 +143,7 @@ function setUpInputDropdown() {
     // Create a label element
     const $label = $('<label>', {
         for: 'dropdown',
-        text: 'Chose up-sweep, dont write anything to use default settings (they are written below) '
+        text: 'Choose up-sweep, dont write anything to use default settings (they are written below): '
     });
 
     // Get a reference to the container div by its ID
@@ -180,7 +177,7 @@ function setBackInputDropdown() {
     // Create a label element
     const $label = $('<label>', {
         for: 'dropdown',
-        text: 'Chose back-sweep, or use default settings '
+        text: 'Choose back-sweep, or use default settings: '
     });
 
     // Get a reference to the container div by its ID
@@ -200,25 +197,21 @@ function setBackInputDropdown() {
 }
 
 
-
-
-
-
-
-//width chose 
+//width choose
 $("#width").on("change", function() {
     let widthCheck = $("#width").val();
-    if (widthCheck <= 800 && widthCheck >= 710) {
+    if (widthCheck >= 710 && widthCheck <= 800) {
         width = widthCheck;
         $("#width").val("");
-        $("#width").attr("placeholder", `choosed - ${width}`)
+        $("#width").attr("placeholder", `choosed - ${width}`);
+        $(".widthWarnity").hide()
     } else {
-        alert("Wrong equall , chose width from 710 to 800")
         $("#width").val("");
+        let wrongWidthHtml = `<p class="widthWarnity" style="color: red;">Wrong equal, choose width from 710 to 800</p>`;
+        $(".barWidth").append(wrongWidthHtml);
     }
-    console.log(width)
-
-})
+    console.log(width);
+});
 
 //spacers
 $(document).ready(function() {
@@ -231,8 +224,12 @@ $(document).ready(function() {
     });
 });
 
-//send info to tg bot
+//go to user info page 
 $(".nextBtn").on("click", function() {
+    window.location.href = "/customerInfo.html";
+});
+//send info to tg bot
+$(".orderReadyBtn").on("click", function() {
     // console.log(colorAnod)
 
     if (width) {

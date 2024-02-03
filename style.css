@@ -147,37 +147,77 @@ input:checked+.slider:before {
     color: white;
 }
 
-.tabs {
-    overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 10px;
+
+/*anod btns design*/
+
+.anodButtons {}
+
+.anodButtons>input {
+    width: 15%;
+    margin: 1%;
+}
+
+@media screen and (max-width: 500px) {
+    .anodButtons>input {
+        width: 33%;
+        text-align: center;
+    }
+}
+
+.tabcontent {
+    text-align: center;
+}
+
+.tabcontent>h3 {
+    margin-right: 20%;
+}
+
+.choseAnod {
+    margin-top: 1%;
+}
+
+#dropdown {
+    float: right;
+    margin-right: 15%;
+}
+
+.riseBtn {
+    max-height: 40px;
+}
+
+.choseRise {
+    display: flex;
+    justify-content: space-between;
+}
+
+.riseImg {
+    display: flex;
+    justify-self: center;
+    max-width: 35%;
+}
+
+.beforeTabsp {
+    max-width: 400px;
 }
 
 
-/* Style the buttons inside the tabs */
+/* Style the tab buttons */
 
-.tablinks {
-    background-color: inherit;
-    float: left;
+.tab button {
+    background-color: #f2f2f2;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 10px 20px;
     transition: 0.3s;
-    background-color: whitesmoke;
+    font-size: 18px;
+    border-radius: 10%;
 }
 
 
-/* Change background color of buttons on hover */
+/* Change background color of the active tab button */
 
-.tablinks:hover {
-    background-color: #ddd;
-}
-
-
-/* Create an active/current tablink class */
-
-.tablinks.active {
+.tab button.active {
     background-color: #ccc;
 }
 
@@ -187,5 +227,33 @@ input:checked+.slider:before {
 .tabcontent {
     display: none;
     padding: 20px;
-    border-top: none;
+}
+
+
+/* Style the active tab content */
+
+.tabcontent.active {
+    display: block;
+}
+
+
+/* Style the container of the tab */
+
+.tab {
+    overflow: hidden;
+}
+
+
+/* Clear floats */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.nextBtn {
+    background-color: black;
+    color: whitesmoke;
+    min-height: 5%;
 }
