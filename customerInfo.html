@@ -27,14 +27,49 @@
 
     <body>
         <div class="customerInfoDiv">
-            <p></p>
+            <p>On this page you should lave your personal indo , and submit your order</p>
+            <div>
+                <input type="text" id="customerName" placeholder="Enter your name">
+                <input type="text" id="customerLastName" placeholder="Enter your last name">
+                <input type="number" id="customerPhoneNumber" placeholder="Enter Ypur phone number">
+            </div><br>
+
+            <div class="infoTabs">
+                <div class="tabs">
+                    <button class="tablinksInfo" id="defaultOpenInfo" data-target="tab1">Instagram</button>
+                    <button class="tablinksInfo" data-target="tab2">Telegram</button>
+                    <button class="tablinksInfo" data-target="tab3">Whatsapp</button>
+                </div>
+
+                <div id="tab1" class="tabcontentInfo">
+                    <h3>Instagram</h3>
+                    <input type="text" id="customerInst" placeholder="Enter your instagram name">
+                </div>
+
+                <div id="tab2" class="tabcontentInfo">
+                    <h3>Telegram</h3>
+                    <input type="text" id="customerTg" placeholder="Enter your telegram id">
+                </div>
+
+                <div id="tab3" class="tabcontentInfo">
+                    <h3>Whatsapp</h3>
+                    <input type="text" id="customerWatsapp" placeholder="Enter your whatsapp id">
+                </div>
+            </div>
+            <br>
+
+
+
+            <div id="showOrderDivv"></div>
+
+            <button class="orderReadyBtn">Ready</button>
         </div>
 
 
 
 
 
-        <button class="orderReadyBtn">Ready</button>
+
         <script src="scripts/script.js"></script>
     </body>
 

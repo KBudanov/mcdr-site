@@ -84,6 +84,15 @@ img#anodColorsImg {
     justify-content: space-between;
 }
 
+.customerInfoDiv {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.orderReadyBtn {
+    max-width: 10%;
+}
+
 textarea,
 input,
 button {
