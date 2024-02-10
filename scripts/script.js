@@ -231,9 +231,10 @@ $(document).ready(function() {
 });
 
 //go to user info page 
+
 $(".nextBtn").on("click", function() {
     window.location.href = "/customerInfo.html";
-    console.log(rise)
+    alert(rise)
 });
 
 $(".colorsInp").hide();
