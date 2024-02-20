@@ -36,11 +36,11 @@ function sendOrderToTelegram(orderText) {
         let botToken = '6827397329:AAGziUZrNAD3bxQAfswT5VmSDDKWCg2HyqI';
 
         let botUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${tgId}&text=${orderText}&parse_mode=html`;
-        //let botUrlDany = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${tgIdDany}&text=${orderText}&parse_mode=html`;
+        let botUrlDany = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${tgIdDany}&text=${orderText}&parse_mode=html`;
 
         // Send the order text to the Telegram bot
         $.post(botUrl);
-        //$.post(botUrlDany);
+        $.post(botUrlDany);
     } else {
         alert("Choose width");
     }
