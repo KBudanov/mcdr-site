@@ -278,18 +278,20 @@ function anodColorSwitch(anodColor) {
     }
 }
 
+//saving data to a local storage
 function writeOrderDetails() {
-    alert(`New order %0A
-    Rise: ${rise}%0A
-    Up-sweep: ${upsweep}%0A
-    Back-sweep: ${backsweep}%0A
-    Width: ${width}%0A
-    Anod color: ${colorAnod}%0A
-    Paint color : ${colorPaint}%0A
-    Paint explenation : ${paintExp}%0A
-    Spacers : ${spacers}%0A
-    Extra comments : ${extraInf}%0A
-   
-    
-    `)
+    let orderInfo = {
+        "rise": rise,
+        "upsweep": upsweep,
+        "backsweep": backsweep,
+        "width": width,
+        "Anod color": colorAnod,
+        "Paint color": colorPaint,
+        "Paint explanation": paintExp,
+        "Spacers": spacers,
+        "Extra comments": extraInf
+    }
+    let orderInfoJSON = JSON.stringify(orderInfo);
+    localStorage.setItem('orderInfo', orderInfoJSON);
+
 }

@@ -11,68 +11,57 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&family=Overlock:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="shop.css">
     <title>Document</title>
+
+
+
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <title>Document</title>
-    </head>
 
-    <body>
-        <div class="customerInfoDiv">
-            <p>On this page you should lave your personal indo , and submit your order</p>
-            <div>
-                <input type="text" id="customerName" placeholder="Enter your name">
-                <input type="text" id="customerLastName" placeholder="Enter your last name">
-                <input type="number" id="customerPhoneNumber" placeholder="Enter Ypur phone number">
-            </div><br>
 
-            <div class="infoTabs">
-                <div class="tabs">
-                    <button class="tablinksInfo" id="defaultOpenInfo" data-target="tab1">Instagram</button>
-                    <button class="tablinksInfo" data-target="tab2">Telegram</button>
-                    <button class="tablinksInfo" data-target="tab3">Whatsapp</button>
-                </div>
+    <div class="customerInfoDiv">
+        <p>On this page you should lave your personal indo , and submit your order</p>
+        <div>
+            <input type="text" id="customerName" placeholder="Enter your name">
+            <input type="text" id="customerLastName" placeholder="Enter your last name">
+            <input type="number" id="customerPhoneNumber" placeholder="Enter Ypur phone number">
+        </div><br>
 
-                <div id="tab1" class="tabcontentInfo">
-                    <h3>Instagram</h3>
-                    <input type="text" id="customerInst" placeholder="Enter your instagram name">
-                </div>
-
-                <div id="tab2" class="tabcontentInfo">
-                    <h3>Telegram</h3>
-                    <input type="text" id="customerTg" placeholder="Enter your telegram id">
-                </div>
-
-                <div id="tab3" class="tabcontentInfo">
-                    <h3>Whatsapp</h3>
-                    <input type="text" id="customerWatsapp" placeholder="Enter your whatsapp id">
-                </div>
+        <div class="infoTabs">
+            <div class="tabs">
+                <button class="tablinksInfo" id="defaultOpenInfo" data-target="tab1">Instagram</button>
+                <button class="tablinksInfo" data-target="tab2">Telegram</button>
+                <button class="tablinksInfo" data-target="tab3">Whatsapp</button>
             </div>
-            <br>
 
+            <div id="tab1" class="tabcontentInfo">
+                <h3>Instagram</h3>
+                <input type="text" id="customerInst" placeholder="Enter your instagram name">
+            </div>
 
+            <div id="tab2" class="tabcontentInfo">
+                <h3>Telegram</h3>
+                <input type="text" id="customerTg" placeholder="Enter your telegram id">
+            </div>
 
-            <div id="showOrderDivv"></div>
-
-
-            <button class="orderReadyBtn">Ready</button>
+            <div id="tab3" class="tabcontentInfo">
+                <h3>Whatsapp</h3>
+                <input type="text" id="customerWatsapp" placeholder="Enter your whatsapp id">
+            </div>
         </div>
+        <br>
 
 
 
+        <div id="showOrderDivv"></div>
 
 
+        <button class="orderReadyBtn">Ready</button>
+    </div>
 
-        <script src="customerInfo.js"></script>
+    <script src="customerInfo.js"></script>
+    <script src="shop.js"></script>
+</body>
 
-    </body>
-
-    </html>
+</html>
