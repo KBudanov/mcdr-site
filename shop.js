@@ -53,7 +53,6 @@ let colors = {
     19: "TMC"
 }
 
-
 let rise;
 let upsweep;
 let backsweep;
@@ -70,8 +69,6 @@ let customerWatsapp;
 let customerName;
 let customerLastName;
 let customerPhonenUmber;
-
-
 
 
 //rise chosing
@@ -107,21 +104,35 @@ $(document).ready(() => {
         $("#anodDesign").val(" ")
         $("#paintDesc").val(" ")
         $("#additionalInf").val(" ")
-
+        writeOrderDetails()
     })
 })
 
-
-//textareas
-
+//customer Info Tabs
 
 
+$(document).ready(function() {
+    // Open default tab
+    $("#defaultOpen").click();
+
+    // Tab click event
+    $(".tablinks").click(function() {
+        var target = $(this).data("target");
+
+        // Remove active class from all tabs
+        $(".tablinks").removeClass("active");
+
+        // Hide all tab content
+        $(".tabcontent").hide();
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        $("#" + target).show();
+        $(this).addClass("active");
+    });
+});
 
 //anod chose
 let colorsForAnodBtns = Object.values(colors)
-console.log(colorsForAnodBtns)
-
-
 
 $(document).on("click", ".anodBtn", function() {
     let btnAnId = this.id;
@@ -234,8 +245,10 @@ $(document).ready(function() {
 
 $(".nextBtn").on("click", function() {
     window.location.href = "/customerInfo.html";
-    alert(rise)
+
 });
+
+//color or anod chosing
 
 $(".colorsInp").hide();
 
@@ -253,7 +266,6 @@ $('#colorSwitch').change(function() {
     }
 });
 
-
 function anodColorSwitch(anodColor) {
     if (anodColor === "paint") {
         $(".anodDesign").hide();
@@ -266,129 +278,18 @@ function anodColorSwitch(anodColor) {
     }
 }
 
-//customer Info Tabs
-$(document).ready(function() {
-    // Open default tab
-    $(".tabcontentInfo").hide();
-    $("#defaultOpenInfo").click();
-
-    // Tab click event
-    $(".tablinksInfo").click(function() {
-        var target = $(this).data("target");
-
-        // Remove active class from all tabs
-        $(".tablinksInfo").removeClass("active");
-
-        // Hide all tab content
-        $(".tabcontentInfo").hide();
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        $("#" + target).show();
-        $(this).addClass("active");
-    });
-});
-
-
-$(document).ready(function() {
-    // Open default tab
-    $("#defaultOpen").click();
-
-    // Tab click event
-    $(".tablinks").click(function() {
-        var target = $(this).data("target");
-
-        // Remove active class from all tabs
-        $(".tablinks").removeClass("active");
-
-        // Hide all tab content
-        $(".tabcontent").hide();
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
-        $("#" + target).show();
-        $(this).addClass("active");
-    });
-});
-
-//function to show customer all info about order
-function showOrder() {
-    let text = `
-    Rise: ${rise}
-    Up-sweep: ${upsweep}
-    Back-sweep: ${backsweep}
-    Width: ${width}
-    Anod color: ${colorAnod}
-    Paint color : ${colorPaint}
-    Paint explenation : ${paintExp}
-    Spacers : ${spacers}
-    Extra comments : ${extraInf}
+function writeOrderDetails() {
+    alert(`New order %0A
+    Rise: ${rise}%0A
+    Up-sweep: ${upsweep}%0A
+    Back-sweep: ${backsweep}%0A
+    Width: ${width}%0A
+    Anod color: ${colorAnod}%0A
+    Paint color : ${colorPaint}%0A
+    Paint explenation : ${paintExp}%0A
+    Spacers : ${spacers}%0A
+    Extra comments : ${extraInf}%0A
+   
     
-    CustomerInfo
-    Customer name: ${customerName}
-    Customer last name: ${customerLastName}
-    Customer  tg: ${customerTg}
-    Customer  inst: ${customerInst}
-    Customer  whatsapp: ${customerWatsapp}
-    `;
-
-    console.log(text)
-    $(".showOrderDivv").append(text)
+    `)
 }
-
-$(".orderReadyBtn").on("click", function() {
-
-    customerInst = $("#customerInst").val()
-    customerTg = $("#customerTg").val()
-    customerWatsapp = $("#customerWatsapp").val()
-    customerLastName = $("#customerLastName").val()
-    customerName = $("#customerName").val()
-    customerPhonenUmber = $("#customerPhoneNumber").val()
-    showOrder()
-})
-
-
-//send info to tg bot
-/*
-$(".orderReadyBtn").on("click", function() {
-    // console.log(colorAnod)
-    console.log(rise, upsweep, colorAnod)
-
-    if (width) {
-        let tgId = 961172191;
-        let tgIdDany = 750134864;
-        let botToken = '6827397329:AAGziUZrNAD3bxQAfswT5VmSDDKWCg2HyqI';
-
-        let a = "text"
-
-        let orderText = `New order %0A
-        Rise: ${rise}%0A
-        Up-sweep: ${upsweep}%0A
-        Back-sweep: ${backsweep}%0A
-        Width: ${width}%0A
-        Anod color: ${colorAnod}%0A
-        Paint color : ${colorPaint}%0A
-        Paint explenation : ${paintExp}%0A
-        Spacers : ${spacers}%0A
-        Extra comments : ${extraInf}%0A
-        %0A
-        %0A
-        CustomerInfo
-        Customer name: ${customerName}%0A
-        Customer last name: ${customerLastName}%0A
-        Customer  tg: ${customerTg}%0A
-        Customer  inst: ${customerInst}%0A
-        Customer  whatsapp: ${customerWatsapp}
-        
-        `;
-
-
-        let botUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${tgId}&text=${orderText}&parse_mode=html`;
-        let botUrlDany = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${tgIdDany}&text=${orderText}&parse_mode=html`;
-
-        $.post(botUrl)
-        $.post(botUrlDany)
-    } else {
-        alert("chose width")
-    }
-
-
-});*/
