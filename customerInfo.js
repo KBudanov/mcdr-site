@@ -15,7 +15,7 @@ $(".orderReadyBtn").on("click", function() {
     Extra comments : ${orderInfo['Extra comments']}%0A
     %0A
     %0A
-    CustomerInfo
+    CustomerInfo  %0A
     Customer name: ${customerName}%0A
     Customer last name: ${customerLastName}%0A
     Customer  tg: ${customerTg}%0A
@@ -45,3 +45,58 @@ function sendOrderToTelegram(orderText) {
         alert("Choose width");
     }
 }
+
+$(document).ready(function() {
+    $(".tabcontentInfo").hide();
+
+    $(".tablinksInfo").click(function() {
+        var target = $(this).data("target");
+
+
+        $(".tablinksInfo").removeClass("active");
+
+        $(".tabcontentInfo").hide();
+
+        $("#" + target).show();
+        $(this).addClass("active");
+    });
+});
+
+
+//read inputs info 
+$("#customerInst").on("change", function() {
+    customerInst = $("#customerInst").val()
+    $("#customerInst").val("")
+    $("#customerInst").attr("placeholder", `your contact : ${customerInst}`)
+    console.log(customerInst)
+});
+$("#customerTg").on("change", function() {
+    customerTg = $("#customerTg").val()
+    $("#customerTg").val("")
+    $("#customerTg").attr("placeholder", `your contact : ${customerTg}`)
+    console.log(customerTg)
+});
+$("#customerWatsapp").on("change", function() {
+    customerWatsapp = $("#customerWatsapp").val()
+    $("#customerWatsapp").val("")
+    $("#customerWatsapp").attr("placeholder", `your contact : ${customerWatsapp}`)
+    console.log(customerWatsapp)
+});
+$("#customerName").on("change", function() {
+    customerName = $("#customerName").val()
+    $("#customerName").val("")
+    $("#customerName").attr("placeholder", ` ${customerName}`)
+    console.log(customerName)
+});
+$("#customerLastName").on("change", function() {
+    customerLastName = $("#customerLastName").val()
+    $("#customerLastName").val("")
+    $("#customerLastName").attr("placeholder", ` ${customerLastName}`)
+    console.log(customerLastName)
+});
+$("#customerPhoneNumber").on("change", function() {
+    customerPhoneNumber = $("#customerPhoneNumber").val()
+    $("#customerPhoneNumber").val("")
+    $("#customerPhoneNumber").attr("placeholder", ` ${customerPhoneNumber}`)
+    console.log(customerPhoneNumber)
+});
