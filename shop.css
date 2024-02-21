@@ -266,3 +266,22 @@ input:checked+.slider:before {
     color: whitesmoke;
     min-height: 5%;
 }
+
+#showOrderDiv {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid black;
+    border-radius: 15px;
+    max-height: 50vh;
+    max-width: 50vw;
+    padding: 2%;
+    font-size: 20px;
+    margin-left: 40vw;
+    position: absolute;
+}
+
+#showOrderDiv>button {
+    min-width: 5vw;
+    border-radius: 15px;
+    margin-top: 15%
+}

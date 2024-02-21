@@ -1,8 +1,7 @@
 let orderInfo = JSON.parse(localStorage.getItem('orderInfo'));
 
-
-$(".orderReadyBtn").on("click", function() {
-    // Use the order details and customer information variables here
+//get order ready before sending 
+$(document).on("click", ".orderReadyBtn", function() {
     let orderText = `New order %0A
     Rise: ${orderInfo.rise}%0A
     Up-sweep: ${orderInfo.upsweep}%0A
@@ -22,14 +21,12 @@ $(".orderReadyBtn").on("click", function() {
     Customer  inst: ${customerInst}%0A
     Customer  whatsapp: ${customerWatsapp}
 `;
-
-    // Send the order details to the Telegram bot
     sendOrderToTelegram(orderText);
     localStorage.clear()
 });
 
+//send order
 function sendOrderToTelegram(orderText) {
-
     if (width) {
         let tgId = 961172191;
         let tgIdDany = 750134864;
@@ -37,8 +34,6 @@ function sendOrderToTelegram(orderText) {
 
         let botUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${tgId}&text=${orderText}&parse_mode=html`;
         let botUrlDany = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${tgIdDany}&text=${orderText}&parse_mode=html`;
-
-        // Send the order text to the Telegram bot
         $.post(botUrl);
         $.post(botUrlDany);
     } else {
@@ -46,6 +41,65 @@ function sendOrderToTelegram(orderText) {
     }
 }
 
+
+//show order before send 
+$("#showOrderDiv").hide()
+
+$(".showOrder").click(function() {
+
+    savecustomerData()
+    showReadyCustomerData()
+    $("#showOrderDiv").html(
+        `Your order<br>
+    Rise: ${orderInfo.rise}<br>
+    Up-sweep: ${orderInfo.upsweep}<br>
+    Back-sweep: ${orderInfo.backsweep}<br>
+    Width: ${orderInfo.width}<br>
+    Anod color: ${orderInfo['Anod color']}<br>
+    Paint color : ${orderInfo['Paint color']}<br>
+    Paint explanation : ${orderInfo['Paint explanation']}<br>
+    Spacers : ${orderInfo.Spacers}<br>
+    Extra comments : ${orderInfo['Extra comments']}<br>
+    CustomerInfo  <br>
+    Customer name: ${customerName}<br>
+    Customer last name: ${customerLastName}<br>
+    Customer  tg: ${customerTg}<br>
+    Customer  inst: ${customerInst}<br>
+    Customer  whatsapp: ${customerWatsapp}<br>
+
+        <br>
+        <button class="orderReadyBtn">Submit</button>
+        <button class="change">Change</button>
+`)
+    $("#showOrderDiv").show()
+    $(".customerInfoDiv").hide()
+})
+
+//change order details if smth wrong 
+$(document).on("click", ".change", function() {
+
+    window.location.href = "/shop.html";
+})
+
+function savecustomerData() {
+    let customerData = {
+        "customerInst": customerInst,
+        "customerTg": customerTg,
+        "customerWatsapp": customerWatsapp,
+        "customerName": customerName,
+        "customerLastName": customerLastName,
+        "customerPhoneNumber": customerPhoneNumber
+    };
+    customerData = JSON.stringify(customerData)
+    localStorage.setItem("customerData", customerData)
+}
+
+function showReadyCustomerData() {
+    let onloadData = JSON.parse(localStorage.getItem('customerData'));
+    console.log(onloadData.customerInst);
+}
+
+//tabs code
 $(document).ready(function() {
     $(".tabcontentInfo").hide();
 
@@ -64,6 +118,7 @@ $(document).ready(function() {
 
 
 //read inputs info 
+
 $("#customerInst").on("change", function() {
     customerInst = $("#customerInst").val()
     $("#customerInst").val("")
