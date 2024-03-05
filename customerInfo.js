@@ -13,10 +13,10 @@ $(document).on("click", ".orderReadyBtn", function() {
     Spacers : ${orderInfo.Spacers}%0A
     Extra comments : ${orderInfo['Extra comments']}%0A
     %0A
-    %0A
     CustomerInfo  %0A
     Customer name: ${customerName}%0A
     Customer last name: ${customerLastName}%0A
+    Customer phone number: ${customerPhoneNumber}%0A
     Customer  tg: ${customerTg}%0A
     Customer  inst: ${customerInst}%0A
     Customer  whatsapp: ${customerWatsapp}
@@ -60,12 +60,14 @@ $(".showOrder").click(function() {
     Paint explanation : ${orderInfo['Paint explanation']}<br>
     Spacers : ${orderInfo.Spacers}<br>
     Extra comments : ${orderInfo['Extra comments']}<br>
+    <br>
     CustomerInfo  <br>
-    Customer name: ${customerName}<br>
-    Customer last name: ${customerLastName}<br>
-    Customer  tg: ${customerTg}<br>
-    Customer  inst: ${customerInst}<br>
-    Customer  whatsapp: ${customerWatsapp}<br>
+    Name: ${customerName}<br>
+    Last name: ${customerLastName}<br>
+    Phone number: ${customerPhoneNumber}<br>
+    Telegram: ${customerTg}<br>
+    Instagram: ${customerInst}<br>
+    Whatsapp: ${customerWatsapp}<br>
 
         <br>
         <button class="orderReadyBtn">Submit</button>
