@@ -1,6 +1,7 @@
 let orderInfo = JSON.parse(localStorage.getItem('orderInfo'));
 
-//get order ready before sending 
+customerPhoneNumber = "none"
+    //get order ready before sending 
 $(document).on("click", ".orderReadyBtn", function() {
     let orderText = `New order %0A
     Rise: ${orderInfo.rise}%0A
@@ -70,8 +71,10 @@ $(".showOrder").click(function() {
     Whatsapp: ${customerWatsapp}<br>
 
         <br>
+        <div class = "ordershowBtns">
         <button class="orderReadyBtn">Submit</button>
-        <button class="change">Change</button>
+        <button class="changeBtn">Change</button>
+        </div>
 `)
     $("#showOrderDiv").show()
     $(".customerInfoDiv").hide()
@@ -98,7 +101,6 @@ function savecustomerData() {
 
 function showReadyCustomerData() {
     let onloadData = JSON.parse(localStorage.getItem('customerData'));
-    console.log(onloadData.customerInst);
 }
 
 //tabs code
@@ -157,3 +159,9 @@ $("#customerPhoneNumber").on("change", function() {
     $("#customerPhoneNumber").attr("placeholder", ` ${customerPhoneNumber}`)
     console.log(customerPhoneNumber)
 });
+
+//adding chosing contact info , checking form filling 
+$(".orderReadyBtn").on("click", function() {
+    alert("asdfsdafasd")
+
+})
