@@ -1,0 +1,64 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    font-family: "Overlock", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
+/*header*/
+
+.mainPageHeader {
+    width: 99.5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid whitesmoke;
+    position: fixed;
+    top: 0;
+}
+
+.headerLogoImg {
+    max-height: 12vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.mainPageHeader a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 5vh;
+    margin-top: 2.5vh;
+}
+
+
+/*footer*/
+
+footer {
+    width: 99.5vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-top: 1px solid whitesmoke;
+    bottom: 0px;
+    height: 30vh;
+    position: fixed;
+    font-size: 25px;
+}
+
+ul {
+    list-style: none;
+}
