@@ -1,5 +1,5 @@
 body {
-    background-color: #333;
+    background-color: #000000;
     color: #fff;
     padding: 20px;
     font-family: "Overlock", sans-serif;
@@ -24,9 +24,9 @@ body {
 .choseRise input[type="button"] {
     margin-bottom: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: 2px solid #007bff;
+    background-color: whitesmoke;
+    color: #000000;
+    border: 2px solid whitesmoke;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
@@ -34,7 +34,8 @@ body {
 
 .choseRise input[type="button"]:hover {
     background-color: transparent;
-    color: #fff;
+    color: #ffffff;
+    background-color: black;
 }
 
 .upsweep,
@@ -54,12 +55,12 @@ input[type="button"] {
     margin-top: 10px;
     text-align: center;
     padding: 10px;
-    border: 2px solid #007bff;
+    border: 2px solid whitesmoke;
     border-radius: 5px;
 }
 
 input[type="button"]:hover {
-    background-color: #007bff;
+    background-color: whitesmoke;
     color: #fff;
 }
 
@@ -235,15 +236,18 @@ input:checked+.slider:before {
 }
 
 .nextBtn {
-    background-color: black;
-    color: whitesmoke;
+    background-color: whitesmoke;
+    color: rgb(0, 0, 0);
     min-height: 5%;
+    width: 25%;
+    margin-left: 37.5%;
 }
 
 #showOrderDiv {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    border: 1px solid black;
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    color: black;
     border-radius: 15px;
     max-height: 70vh;
     max-width: 50vw;
@@ -257,21 +261,26 @@ input:checked+.slider:before {
         max-width: 90vw;
         margin: 0 auto;
         min-height: 65vh;
-        margin-left: 7%;
     }
-    #showOrderDiv>button {
+    .ordershowBtns>button {
         width: 100%;
         min-width: 60px;
         margin-top: 15px;
+        border-radius: 15px;
     }
 }
 
-#showOrderDiv>button {
-    min-width: 5vw;
+.ordershowBtns>button {
+    min-width: 6vw;
     border-radius: 15px;
     margin-top: 15px;
+    background-color: white;
 }
 
 .orderReadyBtn {
     min-width: 3vw;
+}
+
+button {
+    border-radius: 15px;
 }

@@ -44,6 +44,50 @@ a {
 }
 
 
+/*adaptive header*/
+
+@media screen and (max-width: 500px) {
+    .mainPageHeader>a {
+        font-size: medium;
+    }
+    .mainPageHeader>img {
+        max-width: 15vw;
+    }
+}
+
+
+/*hover header*/
+
+
+/*.headerLogoImgTwo {
+    display: none;
+}
+
+.mainPageHeader:hover .headerLogoImg {
+    display: none;
+}
+
+.mainPageHeader:hover .headerLogoImgTwo {
+    display: inline-block;
+
+.headerLogoImgTwo {
+    min-width: 10vw;
+    max-height: 15vh;
+}
+
+}*/
+
+@media screen and (min-width: 500px) {
+    .mainPageHeader>a:hover {
+        background-color: whitesmoke;
+        color: black;
+        font-size: 60px;
+        max-width: 40vw;
+        margin-bottom: 3vh;
+    }
+}
+
+
 /*footer*/
 
 footer {
