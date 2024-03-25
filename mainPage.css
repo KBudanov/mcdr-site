@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: black;
+    background-image: url(imgs//mp1.JPG);
     color: whitesmoke;
     font-family: "Overlock", sans-serif;
     font-weight: 700;
@@ -26,7 +26,8 @@ a {
     flex-direction: row;
     justify-content: space-around;
     border-bottom: 1px solid whitesmoke;
-    position: fixed;
+    position: absolute;
+    margin-bottom: 5%;
     top: 0;
 }
 
@@ -52,6 +53,9 @@ a {
     }
     .mainPageHeader>img {
         max-width: 15vw;
+    }
+    .wrapper {
+        margin-top: 8vh;
     }
 }
 
@@ -81,9 +85,12 @@ a {
     .mainPageHeader>a:hover {
         background-color: whitesmoke;
         color: black;
-        font-size: 60px;
+        /* font-size: 60px;*/
         max-width: 40vw;
         margin-bottom: 3vh;
+    }
+    .wrapper {
+        margin-top: 15vh;
     }
 }
 
@@ -97,12 +104,33 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     border-top: 1px solid whitesmoke;
-    bottom: 0px;
     height: 30vh;
-    position: fixed;
+    margin-top: 5%;
+    position: absolute;
     font-size: 25px;
 }
 
 ul {
     list-style: none;
+}
+
+
+/*wrapper*/
+
+.wrapper>p {
+    max-width: 90vw;
+}
+
+.gridWrapper {
+    max-width: 90vw;
+    background-color: black;
+    padding: 2%;
+    margin-right: 3%;
+    display: grid;
+    grid-template-columns: repeat(3, 30vw);
+}
+
+.gridWrapper>img {
+    max-width: 50vw;
+    max-height: 60vh;
 }
