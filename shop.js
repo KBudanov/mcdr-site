@@ -24,13 +24,7 @@ let defaulUpBack = {
 
 let keysForRise = Object.keys(defaulUpBack)
 
-
-
-
-
 //!!!!!!!!!!!!!!!!!!!!!
-
-
 let colors = {
     1: "Bronze",
     2: "Night",
@@ -69,6 +63,29 @@ let customerWatsapp;
 let customerName;
 let customerLastName;
 let customerPhonenUmber;
+
+// test start 
+/*
+let checkArray = [rise, upsweep, width, colorAnod || colorPaint, backsweep, customerTg || customerInst || customerWatsapp,
+    customerName, customerPhonenUmber
+]
+
+$(".showOrder").on("click", () => {
+    for (let i = 0; i < checkArray.length; i++) {
+        alert(checkArray)
+        if (Object.entries(checkArray)) alert(checkArray[i])
+        else alert("ne peremoga")
+    }
+})
+*/
+$(".showOrder").on("click", () => {
+    if ($(".firstInpForm").prop('required', true) && $(".anodButtons") || ("#paintDesc").prop('required', true)) alert("peremoga")
+    else alert("fafsdaf")
+
+})
+
+//test code end 
+
 
 
 //rise chosing

@@ -50,6 +50,10 @@ body {
     margin-bottom: 10px;
 }
 
+.tablinks {
+    margin-bottom: 2%;
+}
+
 input[type="number"],
 input[type="button"] {
     margin-top: 10px;
@@ -60,8 +64,9 @@ input[type="button"] {
 }
 
 input[type="button"]:hover {
-    background-color: whitesmoke;
-    color: #fff;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
 }
 
 img#anodColorsImg {
