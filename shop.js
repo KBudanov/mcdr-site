@@ -64,33 +64,10 @@ let customerName;
 let customerLastName;
 let customerPhonenUmber;
 
-// test start 
-/*
-let checkArray = [rise, upsweep, width, colorAnod || colorPaint, backsweep, customerTg || customerInst || customerWatsapp,
-    customerName, customerPhonenUmber
-]
-
-$(".showOrder").on("click", () => {
-    for (let i = 0; i < checkArray.length; i++) {
-        alert(checkArray)
-        if (Object.entries(checkArray)) alert(checkArray[i])
-        else alert("ne peremoga")
-    }
-})
-*/
-$(".showOrder").on("click", () => {
-    if ($(".firstInpForm").prop('required', true) && $(".anodButtons") || ("#paintDesc").prop('required', true)) alert("peremoga")
-    else alert("fafsdaf")
-
-})
-
-//test code end 
 
 
 
-//rise chosing
-
-
+//rise chosing       
 function renderRise() {
     for (let i = 0; i < keysForRise.length; i++) {
         $(".choseRise").prepend(
@@ -99,7 +76,6 @@ function renderRise() {
     }
 }
 
-// here is the block which will call all after the page is loaded
 $(document).ready(() => {
     renderRise()
 
@@ -112,7 +88,6 @@ $(document).ready(() => {
         upsweep = defaulUpBack[rise].split(",")[0]
         backsweep = defaulUpBack[rise].split(",")[1]
     });
-
     $(".nextBtn").on("click", function() {
         extraInf = $("#additionalInf").val()
         colorPaint = $("#paintDesc").val()
@@ -125,24 +100,13 @@ $(document).ready(() => {
     })
 })
 
-//customer Info Tabs
-
-
+//customer Info Tabs   
 $(document).ready(function() {
-    // Open default tab
     $("#defaultOpen").click();
-
-    // Tab click event
     $(".tablinks").click(function() {
         var target = $(this).data("target");
-
-        // Remove active class from all tabs
         $(".tablinks").removeClass("active");
-
-        // Hide all tab content
         $(".tabcontent").hide();
-
-        // Show the current tab, and add an "active" class to the button that opened the tab
         $("#" + target).show();
         $(this).addClass("active");
     });
@@ -164,29 +128,24 @@ for (let i = 0; i < colorsForAnodBtns.length; i++) {
 
 }
 
-// Create a function to set up the input dropdown
+
 function setUpInputDropdown() {
-    // Create a select element
+
     const $dropdown = $('<select>', { id: 'dropdown' });
 
-    // Add options 1 to 6
     for (let i = 1; i <= 6; i++) {
         $dropdown.append($('<option>', { value: i, text: i }));
     }
 
-    // Create a label element
     const $label = $('<label>', {
         for: 'dropdown',
         text: 'Choose up-sweep, dont write anything to use default settings (they are written below): '
     });
 
-    // Get a reference to the container div by its ID
     const $container = $('#up-input-container');
 
-    // Append the label and dropdown to the container
     $container.append($label, $dropdown);
 
-    // Set an event handler for when the dropdown value changes
     $dropdown.on('change', function() {
         const selectedValue = $dropdown.val();
         upsweep = selectedValue
@@ -195,32 +154,30 @@ function setUpInputDropdown() {
     });
 }
 
-// Call the function to set up the input dropdown
 setUpInputDropdown();
 setBackInputDropdown();
 
 function setBackInputDropdown() {
-    // Create a select element
+
     const $dropdown = $('<select>', { id: 'dropdown' });
 
-    // Add options 1 to 6
+
     for (let i = 7; i <= 15; i++) {
         $dropdown.append($('<option>', { value: i, text: i }));
     }
 
-    // Create a label element
+
     const $label = $('<label>', {
         for: 'dropdown',
         text: 'Choose back-sweep, or use default settings: '
     });
 
-    // Get a reference to the container div by its ID
+
     const $container = $('#back-input-container');
 
-    // Append the label and dropdown to the container
     $container.append($label, $dropdown);
 
-    // Set an event handler for when the dropdown value changes
+
     $dropdown.on('change', function() {
         const selectedValue = $dropdown.val();
         backsweep = selectedValue

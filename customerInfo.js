@@ -42,6 +42,26 @@ function sendOrderToTelegram(orderText) {
     }
 }
 
+//test
+
+let checkArray = [orderInfo.rise, orderInfo.upsweep, orderInfo.backsweep, orderInfo.colorAnod, orderInfo.colorPaint, orderInfo.customerTg || orderInfo.customerInst || orderInfo.customerWatsapp,
+    orderInfo.customerName, orderInfo.customerPhonenUmber
+]
+
+$(".showOrder").on("click", () => {
+    console.log(orderInfo.colorAnod)
+    for (let i = 0; i < checkArray.length; i++) {
+        console.log(checkArray[i])
+        if (checkArray[i] === undefined || checkArray[i] === null || checkArray[i] === '') {
+            console.log("Variable at index", i, "is not filled");
+        } else {
+            console.log("Variable at index", i, "is filled with value:", checkArray[i]);
+        }
+    }
+});
+
+//test end
+
 
 //show order before send 
 $("#showOrderDiv").hide()
