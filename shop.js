@@ -47,6 +47,8 @@ let colors = {
     19: "TMC"
 }
 
+let bgsForColors = ["#CD7F32", "#5C0293", "#210293", "#020693", "#007ba7", "#E67451", "#aa6f0d", "#ECC5C0", "pink", "purple", "violet", "#3C64AA", "#b5dfd6", "#088F8F", "#24b385", "rgba(1,1,1,0.3)"]
+
 let rise;
 let upsweep;
 let backsweep;
@@ -119,12 +121,13 @@ $(document).on("click", ".anodBtn", function() {
     let btnAnId = this.id;
     btnAnId = btnAnId.split("anodBtn")[1];
     colorAnod = colors[btnAnId];
+
     console.log("Color clicked: " + colorAnod);
 });
 
 for (let i = 0; i < colorsForAnodBtns.length; i++) {
     let container = $(".anodButtons");
-    $(".anodButtons").append(`<input type="button" class="anodBtn" value="${colorsForAnodBtns[i]}" id="anodBtn${i + 1}">`);
+    $(".anodButtons").append(`<input type="button" style="background-color: ${bgsForColors[i]};" class="anodBtn" value="${colorsForAnodBtns[i]}" id="anodBtn${i + 1}">`);
 
 }
 

@@ -74,13 +74,23 @@ img#anodColorsImg {
     max-width: 90%;
 }
 
-.choseAnod,
 .textInfo,
 .customerInfoDiv {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     border: 2px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.choseAnod {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: none;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
