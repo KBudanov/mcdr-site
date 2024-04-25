@@ -2,7 +2,7 @@ let orderInfo = JSON.parse(localStorage.getItem('orderInfo'));
 
 customerPhoneNumber = "none"
     //get order ready before sending 
-$(document).on("click", ".orderReadyBtn", function() {
+function fullOrder() {
     let orderText = `New order %0A
     Rise: ${orderInfo.rise}%0A
     Up-sweep: ${orderInfo.upsweep}%0A
@@ -24,7 +24,7 @@ $(document).on("click", ".orderReadyBtn", function() {
 `;
     sendOrderToTelegram(orderText);
     localStorage.clear()
-});
+};
 
 //send order
 function sendOrderToTelegram(orderText) {
@@ -44,20 +44,22 @@ function sendOrderToTelegram(orderText) {
 
 //test
 
-let checkArray = [orderInfo.rise, orderInfo.upsweep, orderInfo.backsweep, orderInfo.colorAnod, orderInfo.colorPaint, orderInfo.customerTg || orderInfo.customerInst || orderInfo.customerWatsapp,
-    orderInfo.customerName, orderInfo.customerPhonenUmber
+let checkArray = [orderInfo.rise, orderInfo.upsweep, orderInfo.backsweep, orderInfo.width, orderInfo['Anod color'] || orderInfo['Paint color'], customerTg || customerInst || customerWatsapp,
+    customerName, customerPhoneNumber
 ]
 
 $(".showOrder").on("click", () => {
-    console.log(orderInfo.colorAnod)
+    alert(customerTg)
     for (let i = 0; i < checkArray.length; i++) {
-        console.log(checkArray[i])
         if (checkArray[i] === undefined || checkArray[i] === null || checkArray[i] === '') {
-            console.log("Variable at index", i, "is not filled");
+            console.log(i, "not filled", checkArray[i]);
         } else {
-            console.log("Variable at index", i, "is filled with value:", checkArray[i]);
+            console.log(i, "value:", checkArray[i]);
         }
+
     }
+    fullOrder
+
 });
 
 //test end
