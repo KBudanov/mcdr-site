@@ -1,0 +1,4 @@
+customerinfo.js - 45 line 
+colors for anod btns 
+redesign of all pages
+portfolio.html

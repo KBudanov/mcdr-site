@@ -42,27 +42,30 @@ function sendOrderToTelegram(orderText) {
     }
 }
 
-//test
-
-let checkArray = [orderInfo.rise, orderInfo.upsweep, orderInfo.backsweep, orderInfo.width, orderInfo['Anod color'] || orderInfo['Paint color'], customerTg || customerInst || customerWatsapp,
-    customerName, customerPhoneNumber
-]
-
+//check if all necessary field 
 $(".showOrder").on("click", () => {
-    alert(customerTg)
+    let checkArray = [orderInfo.rise, orderInfo.upsweep, orderInfo.backsweep, orderInfo.width, orderInfo['Anod color'] || orderInfo['Paint color'], customerTg || customerInst || customerWatsapp,
+        customerName, customerPhoneNumber
+    ]
+
+
     for (let i = 0; i < checkArray.length; i++) {
         if (checkArray[i] === undefined || checkArray[i] === null || checkArray[i] === '') {
             console.log(i, "not filled", checkArray[i]);
-        } else {
-            console.log(i, "value:", checkArray[i]);
+            i++
+            if (i >= 8) {
+                fullOrder();
+                alert("sended")
+            } else {
+                alert("not full")
+                console.log(i, "value:", checkArray[i]);
+            }
         }
 
     }
-    fullOrder
+
 
 });
-
-//test end
 
 
 //show order before send 
@@ -102,11 +105,11 @@ $(".showOrder").click(function() {
     $(".customerInfoDiv").hide()
 })
 
-//change order details if smth wrong 
+//change order details if smth wrong
 $(document).on("click", ".change", function() {
-
     window.location.href = "/shop.html";
 })
+
 
 function savecustomerData() {
     let customerData = {
