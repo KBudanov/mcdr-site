@@ -81,8 +81,8 @@ $(".showOrder").click(function() {
     Up-sweep: ${orderInfo.upsweep}<br>
     Back-sweep: ${orderInfo.backsweep}<br>
     Width: ${orderInfo.width}<br>
-    Anod color: ${orderInfo['Anod color']}<br>
-    Paint color : ${orderInfo['Paint color']}<br>
+    Color: ${ "anodizing" + orderInfo['Anod color'] || "paint" + orderInfo['Paint color']}<br>
+    
     Paint explanation : ${orderInfo['Paint explanation']}<br>
     Spacers : ${orderInfo.Spacers}<br>
     Extra comments : ${orderInfo['Extra comments']}<br>
@@ -91,9 +91,8 @@ $(".showOrder").click(function() {
     Name: ${customerName}<br>
     Last name: ${customerLastName}<br>
     Phone number: ${customerPhoneNumber}<br>
-    Telegram: ${customerTg}<br>
-    Instagram: ${customerInst}<br>
-    Whatsapp: ${customerWatsapp}<br>
+    Contact: @${customerTg || customerInst || customerWatsapp}<br>
+  
 
         <br>
         <div class = "ordershowBtns">
