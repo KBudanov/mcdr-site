@@ -22,9 +22,6 @@ footer {
     color: white;
 }
 
-
-/*header*/
-
 .mainPageHeader {
     width: 99vw;
     text-align: center;
@@ -65,28 +62,6 @@ footer {
     }
 }
 
-
-/*hover header*/
-
-
-/*.headerLogoImgTwo {
-    display: none;
-}
-
-.mainPageHeader:hover .headerLogoImg {
-    display: none;
-}
-
-.mainPageHeader:hover .headerLogoImgTwo {
-    display: inline-block;
-
-.headerLogoImgTwo {
-    min-width: 10vw;
-    max-height: 15vh;
-}
-
-}*/
-
 @media screen and (min-width: 500px) {
     .mainPageHeader>a:hover {
         background-color: whitesmoke;
@@ -100,9 +75,6 @@ footer {
     }
 }
 
-
-/*footer*/
-
 footer {
     width: 99vw;
     text-align: center;
@@ -114,82 +86,65 @@ footer {
     margin-top: 5%;
     position: absolute;
     font-size: 25px;
+    margin-bottom: 0;
 }
 
 ul {
     list-style: none;
 }
 
-.wrapper1 {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    padding: 3%;
-    padding-top: 3%;
-}
 
-.mainWrapper {
-    font-size: 22px;
-    width: 70vw;
+/*wrapper*/
+
+.wrapper {
     margin: 0 auto;
-    margin-top: 7%;
-    text-align: center;
+    width: 80vw;
+    border-radius: 15px;
+    margin-top: 14vh;
 }
 
-.mainPtxt2 {
-    padding: 2%;
+
+/*tables*/
+
+#tables {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 1%;
 }
 
-.wrapper1>div {
-    margin-top: 5%;
-}
-
-.wrapper1>img {
+#tables>img {
     width: 50%;
-    height: auto;
-    margin-top: 5%;
-}
-
-.wrapper1>p {
-    max-width: 90vw;
-}
-
-.gridWrapper {
-    max-width: 90vw;
-    background-color: rgba(0, 0, 0, 0.7);
     padding: 2%;
-    margin: 0 auto;
+    border-radius: 10%;
+}
+
+.review {
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 10%;
+    color: white;
+    width: 50%;
+    height: 92%;
+    margin-top: 2%;
+}
+
+.review {
     display: grid;
-    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: 20% 20% 50% 10%;
 }
 
-.gridWrapper>img {
-    max-width: 50vw;
-    max-height: 60vh;
-}
-
-.paintDiv>div>img {
-    width: 100%;
-    height: 100%;
-}
-
-.paintDiv>div {
-    display: grid;
-    grid-template-columns: 40% 30% 30%;
-    gap: 10px;
-}
-
-.anod>div>img {
-    width: auto;
-    height: 50%;
-}
-
-.anod>div {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    gap: 10px;
-}
-
-.anod {
-    max-height: 1000px;
+.rn,
+.rna {
+    float: right;
     margin: 2%;
+    margin-left: 3%;
+    width: 90%;
+    font-size: x-large;
+}
+
+.rt {
+    text-align: center;
+    font-size: large;
+    margin-left: 2%;
+    margin-right: 4%;
 }

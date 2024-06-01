@@ -1,3 +1,4 @@
 colors for anod btns 
 redesign of all pages
 portfolio.html
+adaptivity test
