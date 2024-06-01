@@ -299,3 +299,67 @@ input:checked+.slider:before {
 button {
     border-radius: 15px;
 }
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.mainPageHeader,
+footer {
+    background-color: black;
+    color: white;
+}
+
+.mainPageHeader {
+    width: 99vw;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid whitesmoke;
+    position: absolute;
+    margin-bottom: 5%;
+    top: 0;
+}
+
+.headerLogoImg {
+    max-height: 12vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.mainPageHeader a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 5vh;
+    margin-top: 2.5vh;
+}
+
+
+/*adaptive header*/
+
+@media screen and (max-width: 500px) {
+    .mainPageHeader>a {
+        font-size: medium;
+    }
+    .mainPageHeader>img {
+        max-width: 15vw;
+    }
+    .wrapper {
+        margin-top: 8vh;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .mainPageHeader>a:hover {
+        background-color: whitesmoke;
+        color: black;
+        /* font-size: 60px;*/
+        max-width: 40vw;
+        margin-bottom: 3vh;
+    }
+    .wrapper {
+        margin-top: 15vh;
+    }
+}

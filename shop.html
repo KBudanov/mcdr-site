@@ -17,86 +17,92 @@
 
 
 <body>
+    <header class="mainPageHeader">
+        <img class="headerLogoImg" src="imgs/mainLogo.PNG" href="mainPage.html" alt="">
+        <a href="portfolio.html">Portfolio & Rewiews</a>
+        <a href="shop.html">Configurator</a>
+    </header>
 
-    <div class="container">
-        <p style="margin-top: 0.1%;">Howdy! There you can choose all the settings for your bar: from up-sweep and custom design to wishful deadline for making and custom stickers for your bike;)</p>
+    <div class="wrapper">
+        <div class="container">
+            <p style="margin-top: 0.1%;">Howdy! There you can choose all the settings for your bar: from up-sweep and custom design to wishful deadline for making and custom stickers for your bike;)</p>
 
-        <p style="border-top: 1px solid white;">
-            Select a rise of your handlebar. Descriptions, real photos and a tutorial on choosing a rise are available on the main page
-        </p>
+            <p style="border-top: 1px solid white;">
+                Select a rise of your handlebar. Descriptions, real photos and a tutorial on choosing a rise are available on the main page
+            </p>
 
-        <form class="firstInpForm">
+            <form class="firstInpForm">
 
-            <div class="choseRise"></div>
-            <img class="riseImg" src="" alt="">
-            <div style="margin-bottom: 10px;" id="up-input-container"></div>
-            <div style="margin-bottom: 10px;" id="back-input-container"></div>
+                <div class="choseRise"></div>
+                <img class="riseImg" src="" alt="">
+                <div style="margin-bottom: 10px;" id="up-input-container"></div>
+                <div style="margin-bottom: 10px;" id="back-input-container"></div>
 
-            Recomended: <br>
-            <p>FOR RISES: 115/120/150, BACK: 11, UP: 3</p>
-            <p>FOR RISES: 90/100, BACK: 10, UP: 3</p>
-            <p>FOR RISES: 95/105, BACK: 10, UP: 4</p>
-            <p>FOR RISE: 70, BACK: 9, UP: 4</p>
-            <p>FOR RISE: 50, BACK: 9, UP: 5</p>
+                Recomended: <br>
+                <p>FOR RISES: 115/120/150, BACK: 11, UP: 3</p>
+                <p>FOR RISES: 90/100, BACK: 10, UP: 3</p>
+                <p>FOR RISES: 95/105, BACK: 10, UP: 4</p>
+                <p>FOR RISE: 70, BACK: 9, UP: 4</p>
+                <p>FOR RISE: 50, BACK: 9, UP: 5</p>
 
-            <div class="barWidth">
-                <p>Choose bar width:</p>
-                <p>Standard bar width is 760mm. Leave the field empty for the default value.</p>
-                <input type="number" placeholder="min-710, max-800" name="" id="width">
-            </div>
-    </div>
-    </form>
-
-    <div class="choseAnod">
-        <p class="beforeTabsp">Click on design method (total price will be different):</p>
-        <div class="tab">
-            <button class="tablinks" id="defaultOpen" data-target="tab1">Anodizing</button>
-            <button class="tablinks" data-target="tab2">Color</button>
-            <div id="tab1" class="tabcontent">
-                <h3>Anodizing</h3>
-                <div class="anodDesign2">
-                    <img src="imgs/anodColors.JPG" id="anodColorsImg" alt="">
-                    <div class="anodButtons"></div>
+                <div class="barWidth">
+                    <p>Choose bar width:</p>
+                    <p>Standard bar width is 760mm. Leave the field empty for the default value.</p>
+                    <input type="number" placeholder="min-710, max-800" name="" id="width">
                 </div>
-                <div class="anodDesign">
-                    <p>You can make your own engraving-paint design on a bar with anodizing too, just describe it here</p>
-                    <textarea placeholder="Anod desight" name="" id="anodDesign" cols="30" rows="6"></textarea>
+        </div>
+        </form>
+
+        <div class="choseAnod">
+            <p class="beforeTabsp">Click on design method (total price will be different):</p>
+            <div class="tab">
+                <button class="tablinks" id="defaultOpen" data-target="tab1">Anodizing</button>
+                <button class="tablinks" data-target="tab2">Color</button>
+                <div id="tab1" class="tabcontent">
+                    <h3>Anodizing</h3>
+                    <div class="anodDesign2">
+                        <img src="imgs/anodColors.JPG" id="anodColorsImg" alt="">
+                        <div class="anodButtons"></div>
+                    </div>
+                    <div class="anodDesign">
+                        <p>You can make your own engraving-paint design on a bar with anodizing too, just describe it here</p>
+                        <textarea placeholder="Anod desight" name="" id="anodDesign" cols="30" rows="6"></textarea>
+                    </div>
+                </div>
+
+                <div id="tab2" class="tabcontent">
+                    <h3>Color</h3>
+
+                    <h3>If you prefer paint, we can also do it. Write a color that should be on your bar and make a short description of paint:
+                    </h3>
+
+                    <textarea placeholder="Paint description" name="" id="paintDesc" cols="30" rows="6"></textarea>
+
                 </div>
             </div>
 
-            <div id="tab2" class="tabcontent">
-                <h3>Color</h3>
 
-                <h3>If you prefer paint, we can also do it. Write a color that should be on your bar and make a short description of paint:
-                </h3>
 
-                <textarea placeholder="Paint description" name="" id="paintDesc" cols="30" rows="6"></textarea>
+
+
+            <div class="textInfo">
+
+
+                <p>If you have some speciall comments about your order , leave it here: </p>
+                <textarea placeholder="Additional info" name="" id="additionalInf" cols="30" rows="10"></textarea>
+
+                <div class="addSpacers">
+                    MCDR also make the 22.2 to 25.4 spacers , if you need it , click the on the bottomn
+                    <div id="tickCrossButton" class="tick-cross">❌</div>
+                </div>
+
+
 
             </div>
-        </div>
-
-
-
-
-
-        <div class="textInfo">
-
-
-            <p>If you have some speciall comments about your order , leave it here: </p>
-            <textarea placeholder="Additional info" name="" id="additionalInf" cols="30" rows="10"></textarea>
-
-            <div class="addSpacers">
-                MCDR also make the 22.2 to 25.4 spacers , if you need it , click the on the bottomn
-                <div id="tickCrossButton" class="tick-cross">❌</div>
-            </div>
-
+            <button class="nextBtn">Next</button>
 
 
         </div>
-        <button class="nextBtn">Next</button>
-
-
-
         <script src="customerInfo.js"></script>
         <script src="shop.js"></script>
 
