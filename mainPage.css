@@ -38,15 +38,15 @@ footer {
 }
 
 .headerLogoImg {
-    max-height: 12vh;
+    max-height: 10vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
 }
 
-.mainPageHeader a {
+.headerA {
     text-decoration: none;
     color: whitesmoke;
-    font-size: 5vh;
+    font-size: 4vh;
     margin-top: 2.5vh;
 }
 
@@ -68,36 +68,17 @@ footer {
 
 /*hover header*/
 
-
-/*.headerLogoImgTwo {
-    display: none;
+.headerA:hover {
+    background-color: whitesmoke;
+    color: black;
+    /* font-size: 60px;*/
+    max-width: 40vw;
+    margin-bottom: 3vh;
+    border-radius: 15px;
 }
 
-.mainPageHeader:hover .headerLogoImg {
-    display: none;
-}
-
-.mainPageHeader:hover .headerLogoImgTwo {
-    display: inline-block;
-
-.headerLogoImgTwo {
-    min-width: 10vw;
-    max-height: 15vh;
-}
-
-}*/
-
-@media screen and (min-width: 500px) {
-    .mainPageHeader>a:hover {
-        background-color: whitesmoke;
-        color: black;
-        /* font-size: 60px;*/
-        max-width: 40vw;
-        margin-bottom: 3vh;
-    }
-    .wrapper {
-        margin-top: 15vh;
-    }
+.wrapper {
+    margin-top: 15vh;
 }
 
 
