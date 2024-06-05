@@ -311,29 +311,32 @@ footer {
     color: white;
 }
 
-.mainPageHeader {
-    width: 97vw;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    border-bottom: 1px solid whitesmoke;
-    position: absolute;
-    margin-bottom: 5%;
-    top: 0;
-}
-
-.headerLogoImg {
-    max-height: 10vh;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-}
-
-.headerA {
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 4vh;
-    margin-top: 2.5vh;
+@media screen and (min-width:500px) {
+    .mainPageHeader {
+        width: 99vw;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-bottom: 1px solid whitesmoke;
+        position: absolute;
+        margin-bottom: 5%;
+        top: 0;
+    }
+    .headerLogoImg {
+        max-height: 10vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+    .headerA {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: 4vh;
+        margin-top: 2.5vh;
+    }
+    .wrapper {
+        margin-top: 12vh;
+    }
 }
 
 
@@ -351,6 +354,44 @@ footer {
     }
 }
 
-.wrapper {
-    margin-top: 6%;
+@media screen and (max-width: 500px) {
+    .mainPageHeader {
+        left: 0;
+        width: 100%;
+        max-height: 15%;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        border-bottom: 1px solid whitesmoke;
+        position: absolute;
+        margin-bottom: 5%;
+        top: 0;
+    }
+    .headerLogoImg {
+        max-height: 6vh;
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+    .headerA {
+        text-decoration: none;
+        color: whitesmoke;
+        font-size: x-large;
+        margin-top: 5.5%;
+    }
+    .wrapper {
+        margin-top: 7vh;
+    }
+}
+
+
+/*hover header*/
+
+.headerA:hover {
+    background-color: whitesmoke;
+    color: black;
+    /* font-size: 60px;*/
+    max-width: 40vw;
+    margin-bottom: 3vh;
+    border-radius: 15px;
 }
