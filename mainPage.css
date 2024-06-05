@@ -200,3 +200,25 @@ ul {
     max-height: 1000px;
     margin: 2%;
 }
+
+img {
+    border-radius: 15px;
+}
+
+.anodImgWr {
+    max-height: 80vh;
+}
+
+@media screen and (max-width:500px) {
+    .mainWrapper {
+        font-size: small;
+        margin-top: 20%;
+    }
+    .anod {
+        width: 100%;
+    }
+    .anod>div>img {
+        width: 90%;
+        height: auto;
+    }
+}
