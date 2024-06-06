@@ -148,34 +148,71 @@ ul {
     border-radius: 10%;
 }
 
-.review {
-    background-color: black;
-    border: 2px solid black;
-    border-radius: 10%;
-    color: white;
-    width: 50%;
-    max-height: 500px;
-    margin: 0 auto;
-    margin-top: 2%;
+@media screen and (min-width:500px) {
+    .review {
+        background-color: black;
+        border: 2px solid black;
+        border-radius: 10%;
+        color: white;
+        width: 50%;
+        max-height: 500px;
+        margin: 0 auto;
+        margin-top: 2%;
+    }
+    .review {
+        display: grid;
+        grid-template-rows: 20% 20% 50% 10%;
+    }
+    .rn,
+    .rna {
+        float: right;
+        margin: 2%;
+        margin-left: 3%;
+        width: 90%;
+        font-size: x-large;
+    }
+    .rt {
+        text-align: center;
+        font-size: large;
+        margin-left: 2%;
+        margin-right: 4%;
+    }
 }
 
-.review {
-    display: grid;
-    grid-template-rows: 20% 20% 50% 10%;
-}
-
-.rn,
-.rna {
-    float: right;
-    margin: 2%;
-    margin-left: 3%;
-    width: 90%;
-    font-size: x-large;
-}
-
-.rt {
-    text-align: center;
-    font-size: large;
-    margin-left: 2%;
-    margin-right: 4%;
+@media screen and (max-width :500px) {
+    .review {
+        background-color: black;
+        border: 2px solid black;
+        border-radius: 10%;
+        color: white;
+        width: 80%;
+        height: 90%;
+        margin: 0 auto;
+        margin-top: 2%;
+        font-size: small;
+    }
+    .review {
+        display: grid;
+        grid-template-rows: 30% 30% 30% 9%;
+    }
+    .starR {
+        margin-bottom: 10px;
+        height: 2vh;
+    }
+    .starR>i {
+        height: 2vh;
+        margin-bottom: 2px;
+    }
+    .rn,
+    .rna {
+        float: right;
+        margin: 2%;
+        margin-left: 3%;
+        width: 90%;
+    }
+    .rt {
+        text-align: center;
+        margin-left: 2%;
+        margin-right: 4%;
+    }
 }

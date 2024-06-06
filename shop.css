@@ -6,7 +6,6 @@
 body {
     background-color: #000000;
     color: #fff;
-    padding: 20px;
     font-family: "Overlock", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -18,6 +17,7 @@ body {
     padding: 20px;
     border: 2px solid #fff;
     border-radius: 10px;
+    margin-top: 2%;
 }
 
 .choseRise {
@@ -84,7 +84,6 @@ img#anodColorsImg {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid #fff;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -318,7 +317,7 @@ footer {
 
 @media screen and (min-width:500px) {
     .mainPageHeader {
-        width: 98.5%;
+        width: 100%;
         text-align: center;
         display: flex;
         flex-direction: row;
@@ -399,4 +398,22 @@ footer {
     max-width: 40vw;
     margin-bottom: 3vh;
     border-radius: 15px;
+}
+
+.choseAnod {
+    border: 2px solid whitesmoke;
+}
+
+@media screen and (min-width:500px) {
+    .extraWr {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .imgWr>img {
+        width: 50vw;
+        height: auto;
+        margin-top: 2%;
+    }
 }
