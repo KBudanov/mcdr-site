@@ -221,4 +221,9 @@ img {
         width: 90%;
         height: auto;
     }
+    .wrapper1>img {
+        width: 30vw;
+        height: 15vh;
+        margin-top: 5%;
+    }
 }
