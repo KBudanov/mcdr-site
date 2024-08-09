@@ -272,3 +272,14 @@ function writeOrderDetails() {
     localStorage.setItem('orderInfo', orderInfoJSON);
 
 }
+
+//code for customizing bar 
+$(".customizeDiv").hide()
+$(".customizeBtns").on("click", function() {
+    $(".customizeDiv").show()
+})
+
+
+$(".customizeDivHide").on("click", function() {
+    $(".customizeDiv").hide()
+})
