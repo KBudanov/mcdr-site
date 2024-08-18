@@ -424,7 +424,7 @@ footer {
 .gridWrapper {
     margin: 0 auto;
     width: 80%;
-    height: 230vh;
+    height: 150vh;
     border: 2px solid white;
     border-radius: 15px;
     display: grid;

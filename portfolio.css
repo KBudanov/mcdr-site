@@ -215,6 +215,13 @@ img {
         height: auto;
         border-radius: 5%;
     }
+    #review3 {
+        height: 45vh;
+    }
+    #rt4 img {
+        width: 100%;
+        height: 70%;
+    }
 }
 
 @media screen and (max-width :500px) {
