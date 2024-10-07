@@ -283,3 +283,11 @@ $(".customizeBtns").on("click", function() {
 $(".customizeDivHide").on("click", function() {
     $(".customizeDiv").hide()
 })
+
+// code for design bars
+$(".choseAnod").hide();
+
+$("#showDesign").on("click", function() {
+    $(".onemorediv").hide()
+    $(".choseAnod").show();
+})

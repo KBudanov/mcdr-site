@@ -228,7 +228,7 @@ input:checked+.slider:before {
     padding: 10px 20px;
     transition: 0.3s;
     font-size: 18px;
-    border-radius: 10%;
+    border-radius: 10px;
 }
 
 .tab button.active {
@@ -398,10 +398,6 @@ footer {
     max-width: 40vw;
     margin-bottom: 3vh;
     border-radius: 15px;
-}
-
-.choseAnod {
-    border: 2px solid whitesmoke;
 }
 
 @media screen and (min-width:500px) {

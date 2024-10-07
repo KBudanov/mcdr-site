@@ -25,22 +25,31 @@
     </header>
 
     <div class="customizeDiv">
-        <button class="customizeDivHide">hide</button>
-        <div class="barWidth">
-            <p>Choose bar width:</p>
-            <p>Standard bar width is 760mm. Leave the field empty for the default value.</p>
-            <input type="number" placeholder="min-710, max-800" name="" id="width">
+        <div class="onemorediv">
+            <button class="customizeDivHide">hide</button>
+            <div class="barWidth">
+                <p>Choose bar width:</p>
+                <p>Standard bar width is 760mm. Leave the field empty for the default value.</p>
+                <input type="number" placeholder="min-710, max-800" name="" id="width">
+            </div>
+
+            <div style="margin-bottom: 10px;" id="up-input-container"></div>
+            <div style="margin-bottom: 10px;" id="back-input-container"></div>
+            Recomended: <br>
+            <p>FOR RISES: 115/120/150, BACK: 11, UP: 3</p>
+            <p>FOR RISES: 90/100, BACK: 10, UP: 3</p>
+            <p>FOR RISES: 95/105, BACK: 10, UP: 4</p>
+            <p>FOR RISE: 70, BACK: 9, UP: 4</p>
+            <p>FOR RISE: 50, BACK: 9, UP: 5</p>
+
+            <div class="addSpacers">
+                MCDR also make the 22.2 to 25.4 spacers , if you need it , click the on the bottomn
+                <div id="tickCrossButton" class="tick-cross">❌</div>
+            </div>
+
+            <button id="showDesign">Next-></button>
+
         </div>
-
-        <div style="margin-bottom: 10px;" id="up-input-container"></div>
-        <div style="margin-bottom: 10px;" id="back-input-container"></div>
-        Recomended: <br>
-        <p>FOR RISES: 115/120/150, BACK: 11, UP: 3</p>
-        <p>FOR RISES: 90/100, BACK: 10, UP: 3</p>
-        <p>FOR RISES: 95/105, BACK: 10, UP: 4</p>
-        <p>FOR RISE: 70, BACK: 9, UP: 4</p>
-        <p>FOR RISE: 50, BACK: 9, UP: 5</p>
-
 
 
 
@@ -53,11 +62,11 @@
                     <h3>Anodizing</h3>
                     <div class="anodDesign2">
                         <img src="imgs/anodColors.JPG" id="anodColorsImg" alt="">
-                        <div class="anodButtons"></div>
+                        <p>To choose an anodizing color, write the number from 0 to 100 taken from the table below.</p>
                     </div>
                     <div class="anodDesign">
                         <p>You can make your own engraving-paint design on a bar with anodizing too, just describe it here</p>
-                        <textarea placeholder="Anod desight" name="" id="anodDesign" cols="30" rows="6"></textarea>
+                        <textarea placeholder="Anod desight" name="" id="anodDesign" cols="85" rows="2"></textarea>
                     </div>
                 </div>
 
@@ -73,10 +82,7 @@
             </div>
 
             <div class="textInfo">
-                <div class="addSpacers">
-                    MCDR also make the 22.2 to 25.4 spacers , if you need it , click the on the bottomn
-                    <div id="tickCrossButton" class="tick-cross">❌</div>
-                </div>
+
 
 
 
@@ -85,6 +91,7 @@
 
 
         </div>
+
     </div>
 
     <div class="rwr">
